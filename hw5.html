@@ -1,21 +1,32 @@
 <html>
     <style>
    #title{display: flex;justify-content: center;font-size: 50px;color:black} 
-   .topping{display: flex;justify-content: space-around;font-size: 30px}
+   .topping{display: flex;justify-content: space-between;font-size: 30px}
+   .total{display: flex;justify-content: space-between;font-size: 20px}
+   .clear{display: flex;justify-content: flex-end;font-size: 20px}
    </style>
-   <script>
-    var count = 0;function Pepperoni()
-    {count++;document.getElementById('para1').innerHTML = count;}
-    var count = 0;function myFunction()
-    {count++;document.getElementById('para2').innerHTML = count;}
+   <head><script type="text/javascript">
+    var countA = 0;function Pepperoni()
+    {countA++;document.getElementById('para1').innerHTML = countA;}
+    var countB = 0;function Steak()
+    {countB++;document.getElementById('para2').innerHTML = countB;}
+    var countC = 0;function Cheese()
+    {countC++;document.getElementById('para3').innerHTML = countC;}
+    function total()
+    {var total = 0;total = countA+countB+countC;document.getElementById('total').innerHTML = total;}
+    function Clear()
+	{document.getElementById('para1').innerHTML = 0;document.getElementById('para2').innerHTML = 0;
+	document.getElementById('para3').innerHTML = 0;
+	document.getElementById('total').innerHTML = 0;}
    </script>
-   
-    <head>
-    </head>
-    <body>
+   </head>
+    <body bgcolor="lightgrey">
         <title>Pizza Menu</title>
         <p id="title">Pizza Ordering Menu</p>
-        <p class="topping"><a> Pepperoni</a> <a id="para1">0</a> <button onclick="Pepperoni()">Add</button> </p>
-        <p class="topping"><a> Steak</a> <a id="para2">0</a> <button onclick="myFunction()">Add</button> </p>
-        <a>fafaw</a>
+        <p class="topping"><a> Pepperoni</a><img src="http://i.imgur.com/asgyUX1.jpg?3" title="source: imgur.com" /><a id="para1">0</a> <button onclick="Pepperoni()">Add</button> </p>
+        <p class="topping"><a> Steak</a><img src="http://i.imgur.com/d7cksBz.jpg?3" title="source: imgur.com" /><a id="para2">0</a> <button onclick="Steak()">Add</button> </p>
+        <p class="topping"><a> Cheese</a><img src="http://i.imgur.com/9PooMdr.jpg?2" title="source: imgur.com" /><a id="para3">0</a> <button onclick="Cheese()">Add</button> </p>
+        <p class="topping"><a> No. of Toppings</a> <a id="total">0</a><button onclick="total()">Update</button> </p>
+        <p class="clear"> <button onclick="Clear()">Clear</button></p>
     </body>
+</html>
