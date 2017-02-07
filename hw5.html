@@ -1,0 +1,21 @@
+<html>
+    <style>
+   #title{display: flex;justify-content: center;font-size: 50px;color:black} 
+   .topping{display: flex;justify-content: space-around;font-size: 30px}
+   </style>
+   <script>
+    var count = 0;function Pepperoni()
+    {count++;document.getElementById('para1').innerHTML = count;}
+    var count = 0;function myFunction()
+    {count++;document.getElementById('para2').innerHTML = count;}
+   </script>
+   
+    <head>
+    </head>
+    <body>
+        <title>Pizza Menu</title>
+        <p id="title">Pizza Ordering Menu</p>
+        <p class="topping"><a> Pepperoni</a> <a id="para1">0</a> <button onclick="Pepperoni()">Add</button> </p>
+        <p class="topping"><a> Steak</a> <a id="para2">0</a> <button onclick="myFunction()">Add</button> </p>
+        <a>fafaw</a>
+    </body>
